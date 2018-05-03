@@ -10,15 +10,9 @@ var orm = {
           cb(result);
         });
       },
-      insertOne: function(table, cols, vals, cb) {
+
+      insertOne: function(table, cols, val, cb) {
         var queryString = "INSERT INTO " + table;
-    
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
     
         console.log(queryString);
     
