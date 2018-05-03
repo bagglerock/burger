@@ -12,7 +12,9 @@ var orm = {
       },
 
       insertOne: function(table, cols, val, cb) {
-        var queryString = "INSERT INTO " + table;
+
+        //insert into table set object that is coming in?
+        var queryString = "INSERT INTO " + table + " SET " + val;
     
         console.log(queryString);
     
