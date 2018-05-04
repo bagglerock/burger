@@ -91,14 +91,17 @@ label, li {
 .not-eaten {
   display: grid;
   grid-template-rows: 1fr 7fr;
-  overflow: auto
+  overflow: auto;
+  padding: 20px 10px;
 }
 
 .eaten {
   display: grid;
   grid-template-rows: 1fr 7fr;
-  overflow: auto
+  overflow: auto;
+  padding: 20px 10px;
 }
+
 
 .not-eaten-label, .eaten-label {
   text-align: center;

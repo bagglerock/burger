@@ -22,8 +22,11 @@
                     <ul>
                         {{#each burger}} {{#unless devoured}}
                         <li>
-                            <p>Type: {{burger}}</p>
-                            <button class="eat-burger" data-id="{{id}}">EAT!</button>
+                            <p>
+                                <button class="eat-burger" data-id="{{id}}">EAT!</button>
+                                Type: {{burger}}
+                            </p>
+
                         </li>
                         {{/unless}} {{/each}}
                     </ul>
@@ -41,8 +44,11 @@
                     <ul>
                         {{#each burger}} {{#if devoured}}
                         <li>
-                            <p>Type: {{burger}}</p>
-                            <button class="delete-burger" data-id="{{id}}">DELETE!</button>
+                            <p>
+                                <button class="delete-burger" data-id="{{id}}">DELETE!</button>
+                                Type: {{burger}}
+                            </p>
+
                         </li>
                         {{/if}} {{/each}}
                     </ul>
