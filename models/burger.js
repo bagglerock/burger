@@ -16,6 +16,11 @@ var burger = {
     orm.updateOne("burgers", devoured, idStatement, function(res) {
       cb(res);
     });
+  },
+  delete: function(idStatement, cb) {
+    orm.deleteOne("burgers", idStatement, function(res) {
+      cb(res);
+    });
   }
 };
 

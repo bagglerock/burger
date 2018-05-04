@@ -26,14 +26,27 @@ $(function() {
         var newDevouredState = {
             devoured : 1
         };
-    
-        // Send the PUT request.
+
         $.ajax("/api/burgers/" + id, {
           type: "PUT",
           data: newDevouredState
         }).then(
           function() {
             console.log("Burger has been eaten");
+            // Reload the page to get the updated list
+            location.reload();
+          }
+        );
+      });
+
+      $(".delete-burger").on("click", function(event) {
+        var id = $(this).data("id");
+        
+        $.ajax("/api/burgers/" + id, {
+          type: "DELETE"
+        }).then(
+          function() {
+            console.log("Burger has been deleted");
             // Reload the page to get the updated list
             location.reload();
           }

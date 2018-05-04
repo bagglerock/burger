@@ -11,7 +11,6 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burger: data
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -31,6 +30,13 @@ router.put("/api/burgers/:id", function(req, res) {
     } else {
       res.status(200).end();
     }
+  });
+});
+
+router.delete("/api/burgers/:id", function(req, res) {
+  var idStatement = "id = " + req.params.id;
+  burger.delete(idStatement, function(result) {
+    res.json({ id: result.insertId });
   });
 });
 
