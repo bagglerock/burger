@@ -11,14 +11,9 @@ var orm = {
         });
       },
 
-      insertOne: function(table, cols, val, cb) {
-
-        //insert into table set object that is coming in?
-        var queryString = "INSERT INTO " + table + " SET " + val;
-    
-        console.log(queryString);
-    
-        connection.query(queryString, vals, function(err, result) {
+      insertOne: function(table, col, val, cb) {
+        var queryString = "INSERT INTO " + table + " ( burger, devoured ) VALUES ( ? , 0 )";
+        connection.query(queryString, [val] , function(err, result) {
           if (err) {
             throw err;
           }
