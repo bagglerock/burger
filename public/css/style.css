@@ -1,24 +1,113 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: lightcoral;
 }
 
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+button {
+  background-color: orange;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Baloo Tamma', cursive;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+li{
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+label, li {
+  font-family: 'Schoolbell', cursive;
+
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.header-section {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: solid black 2px;
+}
+
+.header-section > h1 {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 50px;
+}
+
+.main-section {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  margin: 5px;
+}
+
+.main-wrapper > div {
+  border: solid black 1px;
+}
+
+.main-label {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.not-eaten {
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  overflow: auto
+}
+
+.eaten {
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  overflow: auto
+}
+
+.not-eaten-label, .eaten-label {
+  text-align: center;
+}
+
+.add-section {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+  padding: 10px 0;
+  border: solid black 2px;
+}
